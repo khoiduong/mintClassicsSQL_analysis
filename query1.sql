@@ -32,10 +32,68 @@ group by
 	p.productCode;
 
 -- 3. Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
+DROP TABLE IF EXISTS NotShippedOrders;
+CREATE TABLE IF NOT EXISTS NotShippedOrders 
+AS 
 SELECT 
+    n.productCode,
+    n.productName,
+    n.totalOrderNotShipped_AllReason,
+    c.totalOrderCancelled
+FROM 
+    (
+    SELECT
+        od.productCode,
+        p.productName,
+        SUM(od.quantityOrdered) AS totalOrderNotShipped_AllReason 
+    FROM
+        orders o, 
+        orderdetails od,
+        products p
+    WHERE 
+        LOWER(o.status) NOT LIKE "shipped" 
+        AND o.orderNumber = od.orderNumber
+        AND od.productCode = p.productCode
+    GROUP BY
+        od.productCode
+    ) n
+JOIN
+    (
+    SELECT 
+        od.productCode,
+        p.productName,
+        SUM(od.quantityOrdered) AS totalOrderCancelled
+    FROM 
+        orders o, 
+        orderdetails od,
+        products p
+    WHERE 
+        LOWER(o.status) LIKE "cancelled" 
+        AND o.orderNumber = od.orderNumber
+        AND od.productCode = p.productCode
+    GROUP BY
+        od.productCode
+    ) c
+ON n.productCode = c.productCode
+ORDER BY totalOrderNotShipped_AllReason DESC;
+
+SELECT * FROM NotShippedOrders;
+
+-- DEBUG FOR ABOVE CODE
+/*select * 
+FROM
+	orders o, 
+    orderdetails od 
+WHERE 
+	lower(o.status) not like "shipped" 
+    and o.orderNumber = od.orderNumber;*/
+    
+ -- NOT WHAT IM LOOKING FOR   
+/*SELECT 
     p.productCode, 
     p.productName, 
-    MAX(o.orderDate) AS latestOrderDate
+    MAX(o.orderDate) AS latestOrderDate,
+    MIN(o.orderDate) AS firstOrderDate
 FROM 
     products p
 JOIN 
@@ -43,4 +101,6 @@ JOIN
 JOIN 
     orders o ON od.orderNumber = o.orderNumber
 GROUP BY 
-    p.productCode, p.productName;
+    p.productCode, p.productName; */
+    
+
