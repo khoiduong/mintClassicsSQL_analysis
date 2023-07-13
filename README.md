@@ -42,23 +42,23 @@ While Warehouse B have the most quantity at 219,183, Warehouse D has the least q
 
 Total quantity sold and current quantity in stock for each product.
 
-productCode	|	productName				                    |	quantityInStock	|	totalQuantOrder
-| ------------- |:-------------:| -----:|
-S10_1678    |	1969 Harley Davidson Ultimate Chopper	|	7933		|	1057
-S10_1949	  |	1952 Alpine Renault 1300		          |	7305		|	961
-S10_2016	  |	1996 Moto Guzzi 1100i			            |	6625		|	999
-S10_4698	  |	2003 Harley-Davidson Eagle Drag Bike	|	5582		|	985
-S10_4757	  |	1972 Alfa Romeo GTA			              |	3252		|	1030
-S10_4962	  |	1962 LanciaA Delta 16V			          |	6791		|	932
-S12_1099	  |	1968 Ford Mustang			                |	68		  |	933
-S12_1108	  |	2001 Ferrari Enzo			                |	3619		|	1019
-S12_1666	  |	1958 Setra Bus				                |	1579		|	972
-S12_2823	  |	2002 Suzuki XREO			                |	9997		|	1028
-S12_3148	  |	1969 Corvair Monza			              |	6906		|	963
-S12_3380	  |	1968 Dodge Charger			              |	9123		|	925
-S12_3891	  |	1969 Ford Falcon			                |	1049		|	965
-S12_3990	  |	1970 Plymouth Hemi Cuda			          |	5663		|	900
-S12_4473	  |	1957 Chevy Pickup			                |	6125		|	1056
-S12_4675	  |	1969 Dodge Charger			              |	7323		|	992
+|productCode	|	productName				          |	quantityInStock	|	totalQuantOrder|
+| :-------------: |:-------------:| :-----: | :--------: 
+|S10_1678    |	1969 Harley Davidson Ultimate Chopper	|	7933		|	1057 |
+|S10_1949	  |	1952 Alpine Renault 1300		          |	7305		|	961    |
+|S10_2016	  |	1996 Moto Guzzi 1100i			            |	6625		|	999|
+|S10_4698	  |	2003 Harley-Davidson Eagle Drag Bike	|	5582		|	985|
+|S10_4757	  |	1972 Alfa Romeo GTA			              |	3252		|	1030|
+|S10_4962	  |	1962 LanciaA Delta 16V			          |	6791		|	932|
+|S12_1099	  |	1968 Ford Mustang			                |	68		  |	933|
+|S12_1108	  |	2001 Ferrari Enzo			                |	3619		|	1019|
+|S12_1666	  |	1958 Setra Bus				                |	1579		|	972|
+|S12_2823	  |	2002 Suzuki XREO			                |	9997		|	1028|
+|S12_3148	  |	1969 Corvair Monza			              |	6906		|	963|
+|S12_3380	  |	1968 Dodge Charger			              |	9123		|	925|
+|S12_3891	  |	1969 Ford Falcon			                |	1049		|	965|
+|S12_3990	  |	1970 Plymouth Hemi Cuda			          |	5663		|	900|
+|S12_4473	  |	1957 Chevy Pickup			                |	6125		|	1056|
+|S12_4675	  |	1969 Dodge Charger			              |	7323		|	992|
 ..... 
 
