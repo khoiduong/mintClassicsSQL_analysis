@@ -38,7 +38,13 @@ Total quantity of items in each warehouse
 According to the table above, Warehouses A and C have similar quantity level of 131,688 and 124,880 respectively. 
 While Warehouse B have the most quantity at 219,183, Warehouse D has the least quantity at 79,380.
 
-**Solution for eliminating one warehouse** is to remove warehouse D and distribute its warehouse item across the other three warehouses
+**<u> Solution for eliminating one warehouse </u>** is to remove warehouse D and distribute its warehouse item across the other three warehouses
+
+Though these are some of the following issues to consider when considering eliminating warehouses:
+- The capacity of the other warehouses to store additional items
+- The cost of moving items from one warehouse to another
+-  The types of items stored in Warehouse D and whether they can be appropriately stored in the other warehouses
+- The impact on delivery times to customers
 
 Total quantity sold and current quantity in stock for each product.
 
@@ -62,3 +68,8 @@ Total quantity sold and current quantity in stock for each product.
 |S12_4675	  |	1969 Dodge Charger			              |	7323		|	992|
 ..... 
 
+According to the data above, we can observe that the quantity that the customer ordered are almost always less than the quantity in stock.
+
+This concludes that the company has more stocks than it can sell, thus we can see the issue of overstocking. 
+
+**<u> One solution to overstocking </u>** is to reduce the inventory of specific products. 
