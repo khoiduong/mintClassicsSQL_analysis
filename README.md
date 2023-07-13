@@ -26,7 +26,7 @@ The goal is find answers to the following question in order to address the needs
 
 ## The following data are produced using SQL queries:
 
-###Total quantity of items in each warehouse
+I. Total quantity of items in each warehouse
 
 |  warehouseCode  |	totalQuantity |
 |  :---------:    |  :--------:|
@@ -47,7 +47,7 @@ Though these are some of the following issues to consider when considering elimi
 -  The types of items stored in Warehouse D and whether they can be appropriately stored in the other warehouses
 - The impact on delivery times to customers
 
-###Total quantity ordered and current quantity in stock for each product.
+II. Total quantity ordered and current quantity in stock for each product.
 
 |productCode	|	productName				          |	quantityInStock	|	totalQuantOrdered|
 | :-------------: |:-------------:| :-----: | :--------: 
@@ -81,7 +81,7 @@ At one hand, the data concludes that the company has more stocks than it can sel
 
 Not only that, the column "totalQuantOrdered" for the above table only covered ordered unit, so there is no information on the status of it (e.g, if it actually shipped or cancelled, or other reason). 
 
-###Number of order not shipped for all reason vs cancelled only.
+III. Number of order not shipped for all reason vs cancelled only.
 |productCode	|productName	|totalOrderNotShipped_AllReason|	totalOrderCancelled
 | :-------------: |:-------------:| :-----: | :--------: |
 S18_3029	|1999 Yamaha Speed Boat	|205	|99
@@ -113,3 +113,14 @@ S700_1138	|The Schooner Bluenose	|116	|79
 S10_4757	|1972 Alfa Romeo GTA	|113	|64
 S24_3151	|1912 Ford Model T Delivery Wagon	|110	|50
 ....
+
+From the Table II, here is the following data in comparison with the first line of Table III:
+
+|productCode	|	productName				          |	quantityInStock	|	totalQuantOrdered|
+| :-------------: |:-------------:| :-----: | :--------: 
+S18_3029	|1999 Yamaha Speed Boat	|4259	|966
+
+For this particular order, we can see that there 21% of the order is not shipped and have to stay in the warehouse or stocks. 
+
+Since the Table II is ordered descently, we can assume at most 21% of the order would not be shipped and have to stay in inventory for quite sometime. 
+
