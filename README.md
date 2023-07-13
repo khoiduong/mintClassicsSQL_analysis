@@ -26,7 +26,7 @@ The goal is find answers to the following question in order to address the needs
 
 ## The following data are produced using SQL queries:
 
-Total quantity of items in each warehouse
+###Total quantity of items in each warehouse
 
 |  warehouseCode  |	totalQuantity |
 |  :---------:    |  :--------:|
@@ -46,7 +46,7 @@ Though these are some of the following issues to consider when considering elimi
 -  The types of items stored in Warehouse D and whether they can be appropriately stored in the other warehouses
 - The impact on delivery times to customers
 
-Total quantity sold and current quantity in stock for each product.
+###Total quantity sold and current quantity in stock for each product.
 
 |productCode	|	productName				          |	quantityInStock	|	totalQuantOrder|
 | :-------------: |:-------------:| :-----: | :--------: 
@@ -75,3 +75,7 @@ Other products that do not have this issues are constant needs of supply in stoc
 At one hand, the data concludes that the company has more stocks than it can sell, thus we can see the issue of **overstocking** or the product is not selling well. On the other, there are product that need supplies.
 
 **<ins> One solution to overstocking </ins>** is to reduce the inventory of specific products. 
+
+In order to reduce inventory, we can take a look at when was the last time a product is sold. In this case, we would like to see which product has not been sold for the longest period of time. 
+
+###....
