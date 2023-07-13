@@ -1,4 +1,4 @@
-# Project Scenario 
+![image](https://github.com/khoiduong/mintClassicsSQL_analysis/assets/22307784/36fc2ee7-45a8-42ca-9a05-cf0505506c31)# Project Scenario 
 
 Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. 
 
@@ -36,6 +36,7 @@ The goal is find answers to the following question in order to address the needs
 |  d		          |	79380  |
 
 According to the table above, Warehouses A and C have similar quantity level of 131,688 and 124,880 respectively. 
+
 While Warehouse B have the most quantity at 219,183, Warehouse D has the least quantity at 79,380.
 
 **<ins> Solution for eliminating one warehouse </ins>** is to remove warehouse D and distribute its warehouse item across the other three warehouses
@@ -46,9 +47,9 @@ Though these are some of the following issues to consider when considering elimi
 -  The types of items stored in Warehouse D and whether they can be appropriately stored in the other warehouses
 - The impact on delivery times to customers
 
-###Total quantity sold and current quantity in stock for each product.
+###Total quantity ordered and current quantity in stock for each product.
 
-|productCode	|	productName				          |	quantityInStock	|	totalQuantOrder|
+|productCode	|	productName				          |	quantityInStock	|	totalQuantOrdered|
 | :-------------: |:-------------:| :-----: | :--------: 
 |S10_1678    |	1969 Harley Davidson Ultimate Chopper	|	7933		|	1057 |
 |S10_1949	  |	1952 Alpine Renault 1300		          |	7305		|	961    |
@@ -69,13 +70,45 @@ Though these are some of the following issues to consider when considering elimi
 ..... 
 
 According to the data above, we can observe that the quantity that the customer ordered are almost always significant less than the quantity in stock.
+
 For example, some product such as "2002 Suzuki XREO" has only sold 1019 units, but there are still almost 10,000 units in stocks. There are 10x more inventory than the company can sell.
+
 Other products that do not have this issues are constant needs of supply in stocks. One example would be "1968 Ford Mustang" are in critical need of restock in order to sell.
 
 At one hand, the data concludes that the company has more stocks than it can sell, thus we can see the issue of **overstocking** or the product is not selling well. On the other, there are product that need supplies.
 
 **<ins> One solution to overstocking </ins>** is to reduce the inventory of specific products. 
 
-In order to reduce inventory, we can take a look at when was the last time a product is sold. In this case, we would like to see which product has not been sold for the longest period of time. 
+Not only that, the column "totalQuantOrdered" for the above table only covered ordered unit, so there is no information on the status of it (e.g, if it actually shipped or cancelled, or other reason). 
 
-###....
+###Number of order not shipped for all reason vs cancelled only.
+|productCode	|productName	|totalOrderNotShipped_AllReason|	totalOrderCancelled
+| :-------------: |:-------------:| :-----: | :--------: |
+S18_3029	1999 Yamaha Speed Boat	205	99
+S72_3212	Pont Yacht	188	61
+S700_3167	F/A 18 Hornet 1/72	175	66
+S700_3962	The Queen Mary	170	63
+S700_3505	The Titanic	170	54
+S700_2610	The USS Constitution Ship	167	78
+S700_2466	America West Airlines B757-200	155	33
+S72_1253	Boeing X-32A JSF	153	61
+S24_3949	Corsair F4U ( Bird Cage)	153	48
+S24_1785	1928 British Royal Navy Airplane	152	81
+S24_3816	1940 Ford Delivery Sedan	152	101
+S18_1662	1980s Black Hawk Helicopter	142	92
+S18_3685	1948 Porsche Type 356 Roadster	142	31
+S18_3856	1941 Chevrolet Special Deluxe Cabriolet	141	68
+S50_1341	1930 Buick Marquette Phaeton	139	83
+S700_2047	HMS Bounty	134	73
+S18_2581	P-51-D Mustang	132	24
+S18_1589	1965 Aston Martin DB5	132	24
+S24_3420	1937 Horch 930V Limousine	131	78
+S24_4278	1900s Vintage Tri-Plane	129	27
+S700_1938	The Mayflower	127	73
+S32_4289	1928 Ford Phaeton Deluxe	126	64
+S24_2011	18th century schooner	124	81
+S700_4002	American Airlines: MD-11S	119	35
+S18_3259	Collectable Wooden Train	119	71
+S700_1138	The Schooner Bluenose	116	79
+S10_4757	1972 Alfa Romeo GTA	113	64
+S24_3151	1912 Ford Model T Delivery Wagon	110	50
