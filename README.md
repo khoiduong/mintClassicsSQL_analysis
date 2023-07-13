@@ -28,12 +28,12 @@ The goal is find answers to the following question in order to address the needs
 
 Total quantity of items in each warehouse
 
-warehouseCode	|	totalQuantity
+|warehouseCode	|	totalQuantity |
 | ------------- |:------------- :|
-a		|	131688
-b		|	219183
-c		|	124880
-d		|	79380
+|a		|	131688 |
+|b		|	219183 |
+|c		|	124880 |
+|d		|	79380  |
 
 According to the table above, Warehouses A and C have similar quantity level of 131,688 and 124,880 respectively. 
 While Warehouse B have the most quantity at 219,183, Warehouse D has the least quantity at 79,380.
