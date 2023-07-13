@@ -122,5 +122,7 @@ S18_3029	|1999 Yamaha Speed Boat	|4259	|966
 
 For this particular order, we can see that there 21% of the order is not shipped and have to stay in the warehouse or stocks. 
 
-Since the Table II is ordered descently, we can assume at most 21% of the order would not be shipped and have to stay in inventory for quite sometime. 
+Since the Table II is ordered descently, we can assume around 20% of the order would not be shipped and have to stay in inventory for quite sometime. 
+
+At the same time, we can also use this list to see which product require a reduction in inventory since they are not selling as well as the other.
 
